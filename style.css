@@ -131,10 +131,10 @@ p { margin: 0 0 1em; }
   font-size: clamp(1.35rem, 2.6vw, 1.9rem);
   font-weight: 450;
   line-height: 1.28;
-  max-width: 24ch;
+  max-width: 30ch;
   margin-bottom: 1.2rem;
 }
-.hero-meta { max-width: 46ch; color: #cfc6dc; margin-bottom: 2rem; }
+.hero-meta { max-width: 54ch; color: #cfc6dc; margin-bottom: 2rem; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 2rem; }
 .btn {
   display: inline-block; padding: 0.75rem 1.25rem; border-radius: 999px;
@@ -328,4 +328,25 @@ p { margin: 0 0 1em; }
 @media (max-width: 480px) {
   .rec-list { grid-template-columns: 1fr; }
   .rec-list li + li { border-left: 0; border-top: 1px solid rgba(255,255,255,0.18); }
+}
+
+/* ---------- Hero skills ---------- */
+.hero-skills { list-style: none; display: flex; flex-wrap: wrap; gap: 0.45rem; padding: 0; margin: -0.6rem 0 2rem; max-width: 40rem; }
+.hero-skills li {
+  font-size: 0.85rem; padding: 0.22rem 0.7rem; border-radius: 999px;
+  border: 1px solid rgba(94,201,98,0.55); color: #d6f0d2; background: rgba(28,10,48,0.55);
+}
+
+/* ---------- Education and extracurriculars ---------- */
+.section-edu { padding-top: 0; }
+.edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; border-top: 1px solid var(--rule); padding-top: 4rem; }
+.edu-grid h2 { font-size: clamp(1.9rem, 3.4vw, 2.6rem); }
+.cred { margin: 1.6rem 0 0; }
+.cred > div { padding: 1.1rem 0 1.2rem; border-top: 1px solid var(--rule); }
+.cred > div:first-child { border-top: 3px solid var(--teal); }
+.cred dt { font-family: var(--display); font-weight: 650; font-size: 1.2rem; line-height: 1.3; margin-bottom: 0.25rem; }
+.cred dd { margin: 0 0 0.4rem; max-width: var(--measure); }
+.cred .cred-where { color: var(--muted); }
+@media (max-width: 900px) {
+  .edu-grid { grid-template-columns: 1fr; gap: 2.5rem; padding-top: 3rem; }
 }
